@@ -49,7 +49,7 @@ class Cartao(object):
         if self.indicador is not None and not isinstance(self.indicador, six.integer_types):
             raise TypeError('indicador precisa ser do tipo inteiro.')
 
-        if self.indicador == 1 and not self.codigo_seguranca.is_digit():
+        if self.indicador == 1 and not str(self.codigo_seguranca).is_digit():
             raise TypeError('codigo_seguranca precisa ser do tipo inteiro.')
 
         if self.nome_portador is not None and not isinstance(self.nome_portador, six.string_types):
